@@ -9,14 +9,32 @@ This repository holds the **downloads** (see [Releases](../../releases)). The so
 with every screen explained, is on the website:
 **[Pragmatic Audio PEQ: the article](https://www.pragmaticaudio.com/articles/2026/10/pragmatic-audio-peq/)**.
 
+## What's new (build 26)
+
+- **A/B Test your edits.** In the editor, a folded section lets you switch between your current edits and the previously saved
+  version while music plays, with the saved curve in grey behind your edits, volume matching (with a slider), and a blind test
+  between the two. It is closed by default so it stays out of the way. (iPhone, iPad, Mac, Windows and Android.)
+- **A calmer editor.** **Add filter** sits right under the − and + buttons, and the exact filter values are folded under
+  **Filter details**. Create (Simple and Advanced) uses the same layout.
+- **Android.** The live views now work like the other platforms, after a one-time microphone permission, and the screen-capture
+  option is gone. The EQ no longer stutters on older, slower phones: a **Smoothness** setting (Settings > Android audio) trades
+  a little delay for steadier playback, and it starts on a safe default. The Spiral view is available too, and a flat PEQ now
+  switches the effect off entirely.
+- **Windows.** Fixed the fault that made sound drop out when the effect was on. Settings > Windows audio lists every device and
+  says which have the effect on. After turning a device on or off, which restarts Windows audio, the app presses play again for
+  you. A smaller diagnostic log, a version on the program files, and the build number in the installer's name.
+
 ## Downloads
+
+Please try them and report what you find in [Issues](../../issues). **iPhone and iPad** are on TestFlight, and **Mac, Windows and
+Android** are early releases you can download from the [Releases](../../releases) page.
 
 | Platform | Get it | Status |
 |---|---|---|
 | **macOS** (Apple silicon and Intel, macOS 14 or newer) | the `.dmg` in the latest [`macos-v*` release](../../releases) | Signed and notarised by Apple. |
-| **Windows 11** | the `Setup.exe` in the latest [`windows-v*` release](../../releases) | Early release. **Not code-signed yet**, so Windows shows a warning (see below). |
-| **Android** (9 or newer) | the `.apk` in the latest [`android-v*` release](../../releases) | Early release. Installed by hand, outside Google Play (see below). |
-| **iPhone and iPad** (iOS 27) | TestFlight, then the App Store | Needs iOS 27 and a real device. |
+| **Windows 11** | the `Setup.exe` in the latest [`windows-v*` release](../../releases) | Early release (build 26). **Not code-signed yet**, so Windows shows a warning (see below). Stereo 48 kHz is the only format tested. |
+| **Android** (9 or newer) | the `.apk` in the latest [`android-v*` release](../../releases) | Early release (build 26). Installed by hand, outside Google Play (see below). |
+| **iPhone and iPad** (iOS 27) | TestFlight (build 26), then the App Store | Needs iOS 27 and a real device. |
 
 The Mac app checks this page once a day and tells you when a newer version is out.
 
@@ -36,11 +54,14 @@ app to the Trash.
    processing object that Windows' audio engine loads.
 2. **Windows will warn you** ("Windows protected your PC"), because the installer is not yet signed with a paid code-signing
    certificate. Choose **More info**, then **Run anyway**. You can compare the file with the one on this page if you want to be sure.
-3. In the app, open **Settings > Windows audio** and turn it on for your headphones. A tray icon keeps it running with the
-   window closed.
+3. In the app, open **Settings > Windows audio** and turn it on for **your** playback device (it is off until you do). Windows
+   asks for permission, and restarts Windows audio, which stops your players for a moment. The app presses play again for you; if
+   your player stays paused or silent, press play or restart it. A tray icon keeps the app running with the window closed.
 
-Limits for now: stereo outputs only, and a few audio drivers replace Windows' effects and may drop ours (the app tells you and
-offers to turn it back on). The uninstaller removes everything it added.
+Limits for now: only stereo, 32-bit float, 48 kHz has been tested (44.1 kHz, multichannel, USB DACs and exclusive mode have not),
+and a few audio drivers replace Windows' effects and may drop ours (the app tells you and offers to turn it back on). If
+Smart App Control is on, Windows can block the unsigned installer outright. If the effect ever fails, the sound passes through
+untouched and `C:\ProgramData\PragmaticAudioPEQ\apo.log` says why. The uninstaller removes everything it added.
 
 ### Installing on Android
 
@@ -55,8 +76,9 @@ Android has no system-wide output to choose, so the EQ is attached to the audio 
 is how Wavelet and Poweramp Equalizer work. That means:
 
 - Most music players work. A few, and some phones' own sound effects (Samsung's, Dolby's), can get in the way.
-- The live spectrum needs the **microphone permission** (Android uses it for audio visualisers; nothing is recorded), and Android only
-  gives it coarse, mono, 8-bit audio, so those views are rougher than on a Mac or iPhone.
+- The live views need a one-time **microphone permission** (Android uses it for audio visualisers; nothing is recorded), and Android only
+  gives them coarse, mono, 8-bit audio, so they are rougher than on a Mac or iPhone.
+- If the sound stutters on an older phone, raise **Settings > Android audio > Smoothness**.
 - It needs Android 9 or newer.
 
 ## What it does

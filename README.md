@@ -26,7 +26,7 @@ with every screen explained, is on the website:
 
 ## Downloads
 
-Please try them and report what you find in [Issues](../../issues). **iPhone and iPad** are on TestFlight, and **Mac, Windows and
+Please try them and report what you find in [Issues](../../issues). **iPhone and iPad** are on [TestFlight](https://testflight.apple.com/join/U4Kt84nB), and **Mac, Windows and
 Android** are early releases you can download from the [Releases](../../releases) page.
 
 | Platform | Get it | Status |
@@ -34,7 +34,7 @@ Android** are early releases you can download from the [Releases](../../releases
 | **macOS** (Apple silicon and Intel, macOS 14 or newer) | the `.dmg` in the latest [`macos-v*` release](../../releases) | Signed and notarised by Apple. |
 | **Windows 11** | the `Setup.exe` in the latest [`windows-v*` release](../../releases) | Early release (build 26). **Not code-signed yet**, so Windows shows a warning (see below). Stereo 48 kHz is the only format tested. |
 | **Android** (9 or newer) | the `.apk` in the latest [`android-v*` release](../../releases) | Early release (build 26). Installed by hand, outside Google Play (see below). |
-| **iPhone and iPad** (iOS 27) | TestFlight (build 26), then the App Store | Needs iOS 27 and a real device. |
+| **iPhone and iPad** (iOS 27) | [TestFlight](https://testflight.apple.com/join/U4Kt84nB) (build 26), then the App Store | Needs iOS 27 and a real device. |
 
 The Mac app checks this page once a day and tells you when a newer version is out.
 

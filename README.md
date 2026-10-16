@@ -9,7 +9,20 @@ This repository holds the **downloads** (see [Releases](../../releases)). The so
 with every screen explained, is on the website:
 **[Pragmatic Audio PEQ: the article](https://www.pragmaticaudio.com/articles/2026/10/pragmatic-audio-peq/)**.
 
-## What's new in 1.0.2 (build 38)
+## What's new in macOS 1.0.3 (build 40)
+
+- **Audio recovery.** A separate background helper offers a notification to open
+  PEQ if Pragmatic EQ is selected without a responsive app. After 10 seconds it
+  restores the previous real output if the app has not connected. Allow the
+  helper's notifications and background activity in macOS Settings.
+- **Driver cleanup.** Remove the driver from Settings, or enable automatic removal
+  after dragging the app to the Trash. New driver installations include cleanup;
+  older installations need it enabled once. Profiles and preferences are kept.
+- **Reliable helper startup.** Build 40 fixes registration of the new recovery
+  helper. Its automatic startup was confirmed on the development Mac; full
+  notification, crash recovery and Trash removal checks remain for manual testing.
+
+## Also included since 1.0.2 (build 38)
 
 Available now in the macOS and Android downloads below. iOS App Store and
 TestFlight distribution follow Apple's release process; the Windows download
@@ -35,7 +48,7 @@ Please try them and report what you find in [Issues](../../issues).
 
 | Platform | Get it | Status |
 |---|---|---|
-| **macOS** (Apple silicon and Intel, macOS 14 or newer) | [1.0.2 (38) DMG](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/macos-v1.0.2/Pragmatic-Audio-PEQ-1.0.2-build38.dmg) · [release notes](../../releases/tag/macos-v1.0.2) | Signed by KONECKTA LIMITED; app and DMG notarized and stapled. |
+| **macOS** (Apple silicon and Intel, macOS 14 or newer) | [1.0.3 (40) DMG](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/macos-v1.0.3/Pragmatic-Audio-PEQ-1.0.3-build40.dmg) · [release notes](../../releases/tag/macos-v1.0.3) | Signed by KONECKTA LIMITED; app and DMG notarized and stapled. |
 | **Windows 11** | [Build 26 installer](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/windows-v1.0.0/PragmaticAudioPEQ-1.0.0-build26-Setup.exe) | Previous tester build; a new local Windows build is pending. Not code-signed. |
 | **Android** (9 or newer) | [1.0.2 (38) APK](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/android-v1.0.2/Pragmatic-Audio-PEQ-1.0.2-build38.apk) · [release notes](../../releases/tag/android-v1.0.2) | Release-signed with the existing Android key; installed over build 26 on FiiO M25. |
 | **iPhone and iPad** (iOS 27 or later) | [App Store](https://apps.apple.com/app/id6818329288) · [TestFlight](https://testflight.apple.com/join/U4Kt84nB) | TestFlight availability depends on Apple's processing and beta review. A physical device is required for live audio routing. |
@@ -52,8 +65,13 @@ The Mac app checks this page once a day and tells you when a newer version is ou
    administrator password, and your sound pauses for a second while the audio service restarts. Nothing is recorded.
 3. Choose **Pragmatic EQ** as your sound output (the app can do that for you), and what you play is equalised.
 
-The app lives in the menu bar and can open at login. **Uninstall Audio Driver…** in its menu removes the driver; then drag the
-app to the Trash.
+The app lives in the menu bar and can open at login. Allow notifications and background activity for **Pragmatic Audio PEQ
+Recovery** so it can offer to reopen the app and restore sound after 10 seconds without a processing connection.
+
+**Settings → Audio settings → Mac audio driver** offers manual driver removal and automatic cleanup after the app is moved
+to the Trash. Existing driver installations need automatic cleanup enabled once; new driver installs include it. Allow roughly
+1–2 minutes after trashing the app. The cleanup removes the driver and its installed cleanup helper; saved profiles and settings
+are kept. **Uninstall Audio Driver…** is also available in the Mac menu.
 
 ### Installing on Windows 11
 

@@ -24,9 +24,9 @@ with every screen explained, is on the website:
 
 ## Also included since 1.0.2 (build 38)
 
-Available now in the macOS and Android downloads below. iOS App Store and
-TestFlight distribution follow Apple's release process; the Windows download
-remains build 26 while a new local Windows build is prepared.
+Available in the macOS and Android downloads below. iPhone and iPad users can
+download the app from the App Store. The Windows download remains build 26
+while a new local Windows build is prepared.
 
 - **Adaptive navigation.** Compact portrait screens show Live, Profile, Find profile,
   A/B and Settings. Wide or landscape screens show every section in a left sidebar,
@@ -51,7 +51,7 @@ Please try them and report what you find in [Issues](../../issues).
 | **macOS** (Apple silicon and Intel, macOS 14 or newer) | [1.0.3 (40) DMG](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/macos-v1.0.3/Pragmatic-Audio-PEQ-1.0.3-build40.dmg) · [release notes](../../releases/tag/macos-v1.0.3) | Signed by KONECKTA LIMITED; app and DMG notarized and stapled. |
 | **Windows 11** | [Build 26 installer](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/windows-v1.0.0/PragmaticAudioPEQ-1.0.0-build26-Setup.exe) | Previous tester build; a new local Windows build is pending. Not code-signed. |
 | **Android** (9 or newer) | [1.0.2 (38) APK](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/android-v1.0.2/Pragmatic-Audio-PEQ-1.0.2-build38.apk) · [release notes](../../releases/tag/android-v1.0.2) | Release-signed with the existing Android key; installed over build 26 on FiiO M25. |
-| **iPhone and iPad** (iOS 27 or later) | [App Store](https://apps.apple.com/app/id6818329288) · [TestFlight](https://testflight.apple.com/join/U4Kt84nB) | TestFlight availability depends on Apple's processing and beta review. A physical device is required for live audio routing. |
+| **iPhone and iPad** (iOS 27 or later) | [Download on the App Store](https://apps.apple.com/us/app/pragmatic-audio-peq/id6818329288) | Available on the App Store. A physical device is required for live audio routing. |
 
 Each new Mac and Android release includes a SHA-256 checksum file. The APK is for
 direct installation and is separate from the Google Play submission.

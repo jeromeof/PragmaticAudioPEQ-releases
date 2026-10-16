@@ -9,32 +9,39 @@ This repository holds the **downloads** (see [Releases](../../releases)). The so
 with every screen explained, is on the website:
 **[Pragmatic Audio PEQ: the article](https://www.pragmaticaudio.com/articles/2026/10/pragmatic-audio-peq/)**.
 
-## What's new (build 26)
+## What's new in 1.0.2 (build 38)
 
-- **A/B Test your edits.** In the editor, a folded section lets you switch between your current edits and the previously saved
-  version while music plays, with the saved curve in grey behind your edits, volume matching (with a slider), and a blind test
-  between the two. It is closed by default so it stays out of the way. (iPhone, iPad, Mac, Windows and Android.)
-- **A calmer editor.** **Add filter** sits right under the − and + buttons, and the exact filter values are folded under
-  **Filter details**. Create (Simple and Advanced) uses the same layout.
-- **Android.** The live views now work like the other platforms, after a one-time microphone permission, and the screen-capture
-  option is gone. The EQ no longer stutters on older, slower phones: a **Smoothness** setting (Settings > Android audio) trades
-  a little delay for steadier playback, and it starts on a safe default. The Spiral view is available too, and a flat PEQ now
-  switches the effect off entirely.
-- **Windows.** Fixed the fault that made sound drop out when the effect was on. Settings > Windows audio lists every device and
-  says which have the effect on. After turning a device on or off, which restarts Windows audio, the app presses play again for
-  you. A smaller diagnostic log, a version on the program files, and the build number in the installer's name.
+Available now in the macOS and Android downloads below. iOS App Store and
+TestFlight distribution follow Apple's release process; the Windows download
+remains build 26 while a new local Windows build is prepared.
+
+- **Adaptive navigation.** Compact portrait screens show Live, Profile, Find profile,
+  A/B and Settings. Wide or landscape screens show every section in a left sidebar,
+  including Create and Effects. Tabs is the default for new installations; existing
+  layout preferences are retained, and One page remains available in Settings.
+- **More room to edit.** Graphs and section content fill the space beside the sidebar.
+  Find profile includes Create your own, and A/B has its own destination.
+- **Profiles and controls.** Import separate left and right personalised filter files,
+  choose a language (including Dutch), adjust Smart Headroom or the preamp manually,
+  and preview bass/treble preferences with the loaded profile retained.
+- **Getting started.** A Welcome guide and clearer Live instructions explain connecting
+  music, finding profiles and creating your own. An audio connection alone is no
+  longer treated as confirmation that music is arriving.
+- **Updated icon.** Larger white PEQ lettering on a black badge.
 
 ## Downloads
 
-Please try them and report what you find in [Issues](../../issues). **iPhone and iPad** are on [TestFlight](https://testflight.apple.com/join/U4Kt84nB), and **Mac, Windows and
-Android** are early releases you can download from the [Releases](../../releases) page.
+Please try them and report what you find in [Issues](../../issues).
 
 | Platform | Get it | Status |
 |---|---|---|
-| **macOS** (Apple silicon and Intel, macOS 14 or newer) | the `.dmg` in the latest [`macos-v*` release](../../releases) | Signed and notarised by Apple. |
-| **Windows 11** | the `Setup.exe` in the latest [`windows-v*` release](../../releases) | Early release (build 26). **Not code-signed yet**, so Windows shows a warning (see below). Stereo 48 kHz is the only format tested. |
-| **Android** (9 or newer) | the `.apk` in the latest [`android-v*` release](../../releases) | Early release (build 26). Installed by hand, outside Google Play (see below). |
-| **iPhone and iPad** (iOS 27) | [TestFlight](https://testflight.apple.com/join/U4Kt84nB) (build 26), then the App Store | Needs iOS 27 and a real device. |
+| **macOS** (Apple silicon and Intel, macOS 14 or newer) | [1.0.2 (38) DMG](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/macos-v1.0.2/Pragmatic-Audio-PEQ-1.0.2-build38.dmg) · [release notes](../../releases/tag/macos-v1.0.2) | Signed by KONECKTA LIMITED; app and DMG notarized and stapled. |
+| **Windows 11** | [Build 26 installer](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/windows-v1.0.0/PragmaticAudioPEQ-1.0.0-build26-Setup.exe) | Previous tester build; a new local Windows build is pending. Not code-signed. |
+| **Android** (9 or newer) | [1.0.2 (38) APK](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/android-v1.0.2/Pragmatic-Audio-PEQ-1.0.2-build38.apk) · [release notes](../../releases/tag/android-v1.0.2) | Release-signed with the existing Android key; installed over build 26 on FiiO M25. |
+| **iPhone and iPad** (iOS 27 or later) | [App Store](https://apps.apple.com/app/id6818329288) · [TestFlight](https://testflight.apple.com/join/U4Kt84nB) | TestFlight availability depends on Apple's processing and beta review. A physical device is required for live audio routing. |
+
+Each new Mac and Android release includes a SHA-256 checksum file. The APK is for
+direct installation and is separate from the Google Play submission.
 
 The Mac app checks this page once a day and tells you when a newer version is out.
 

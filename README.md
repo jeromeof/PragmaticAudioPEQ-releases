@@ -34,11 +34,9 @@ them for it.
 
 ### Also new in build 43
 
-- **Squig.link and Hangout headphone measurements load reliably.** Sites that keep each seating as separate files
-  (`L1.txt`, `L2.txt` and so on) are now read and averaged, as their own pages do. Before this, many Squig.link headphones
-  and every Hangout headphone measurement failed to load.
-- **Network devices.** Find LUXSIN and WiiM devices on your network, with a picture of each, and send them a PEQ. The
-  LUXSIN X9 has been checked; the X8 has not.
+- **Devices with their own PEQ.** On Mac and Android, send a PEQ straight to USB DACs, dongles and amps that have one built in
+  (FiiO, Moondrop, Walkplay, Topping, JDS Labs, KT Micro, Qudelix and more), and to LUXSIN and WiiM devices on your network,
+  with a picture of each. Which devices have been tried on real hardware varies; the LUXSIN X9 has.
 - **Audio recovery** on macOS and iPhone/iPad: if Pragmatic EQ is selected but the app is not responding, a helper restores
   your previous output after 10 seconds.
 - **About** thanks the people whose measurements and research the app builds on.
@@ -155,7 +153,8 @@ is how Wavelet and Poweramp Equalizer work. That means:
 - **Live visualisation**: eight views, including Visual PEQ, which shows what the EQ does to your music as it plays.
 - **Headroom management**: the preamp is set from the filters, **Smart headroom** gives back volume where it safely can, and a
   limiter guards the peaks.
-- **Network devices**: finds LUXSIN and WiiM devices and sends them a PEQ.
+- **Devices with their own PEQ**: on Mac and Android, writes a PEQ to USB DACs and dongles that have one, and to LUXSIN and WiiM
+  devices on your network.
 - **In English, Dutch, French, Spanish, German, Italian, Chinese and Japanese.**
 
 ## A look

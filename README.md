@@ -9,7 +9,41 @@ This repository holds the **downloads** (see [Releases](../../releases)). The so
 with every screen explained, is on the website:
 **[Pragmatic Audio PEQ: the article](https://www.pragmaticaudio.com/articles/2026/10/pragmatic-audio-peq/)**.
 
-## What's new in macOS 1.0.3 (build 40)
+## What's new in 1.0.3 (build 43)
+
+### Make your own PEQ from a measurement
+
+Until now you needed someone else to have published a PEQ for your headphones. Now you can **start from a measurement of
+them** and let the app work out the EQ. Open **Create** and choose *From measurements*:
+
+1. **Pick a measurement.** Choose one from Pragmatic Audio's own measurements, **search Squig.link** across its public
+   databases, or browse other measurement sites in the app. If you only have a graph, **choose a picture of it** (the app
+   reads the line and its scales, with on-device text recognition to find them) or load a raw `.txt` measurement file.
+2. **Choose what to design against.** The Harman and other published targets and the preference ranges from the research
+   behind them, with options to line the response up over the bass, mids or both.
+3. **Let the app fit it.** **Smart EQ** refines the filters together against the preference range; **Auto EQ** fits the
+   chosen number of bands to the middle of the range, or to the target itself. Defaults keep the correction below 4 kHz, where
+   measurements are most trustworthy, and you can change that, the number of bands, the largest gain and how narrow peaks at
+   4-10 kHz are treated.
+4. **Hear it before you keep it.** The graph shows the headphone before and after, and the distance from the target in dB.
+   Listen to the EQ on your current output while you adjust it, then open it in the editor like any other PEQ.
+
+Measurements are only read to design an EQ on your device. Nothing is downloadable through the app, so please visit
+[Squig.link](https://squig.link/) and [Hangout Audio](https://graph.hangout.audio/) for the data themselves, and thank
+them for it.
+
+### Also new in build 43
+
+- **Squig.link and Hangout headphone measurements load reliably.** Sites that keep each seating as separate files
+  (`L1.txt`, `L2.txt` and so on) are now read and averaged, as their own pages do. Before this, many Squig.link headphones
+  and every Hangout headphone measurement failed to load.
+- **Network devices.** Find LUXSIN and WiiM devices on your network, with a picture of each, and send them a PEQ. The
+  LUXSIN X9 has been checked; the X8 has not.
+- **Audio recovery** on macOS and iPhone/iPad: if Pragmatic EQ is selected but the app is not responding, a helper restores
+  your previous output after 10 seconds.
+- **About** thanks the people whose measurements and research the app builds on.
+
+### macOS 1.0.3 (build 40) and earlier
 
 - **Audio recovery.** A separate background helper offers a notification to open
   PEQ if Pragmatic EQ is selected without a responsive app. After 10 seconds it
@@ -18,14 +52,11 @@ with every screen explained, is on the website:
 - **Driver cleanup.** Remove the driver from Settings, or enable automatic removal
   after dragging the app to the Trash. New driver installations include cleanup;
   older installations need it enabled once. Profiles and preferences are kept.
-- **Reliable helper startup.** Build 40 fixes registration of the new recovery
-  helper. Its automatic startup was confirmed on the development Mac; full
-  notification, crash recovery and Trash removal checks remain for manual testing.
 
 ## Also included since 1.0.2 (build 38)
 
 Available in the macOS and Android downloads below. iPhone and iPad users can
-download the app from the App Store. The Windows download remains build 26
+download the app from the App Store (build 43 is in TestFlight and follows). The Windows download remains build 26
 while a new local Windows build is prepared.
 
 - **Adaptive navigation.** Compact portrait screens show Live, Profile, Find profile,
@@ -48,9 +79,9 @@ Please try them and report what you find in [Issues](../../issues).
 
 | Platform | Get it | Status |
 |---|---|---|
-| **macOS** (Apple silicon and Intel, macOS 14 or newer) | [1.0.3 (40) DMG](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/macos-v1.0.3/Pragmatic-Audio-PEQ-1.0.3-build40.dmg) · [release notes](../../releases/tag/macos-v1.0.3) | Signed by KONECKTA LIMITED; app and DMG notarized and stapled. |
+| **macOS** (Apple silicon and Intel, macOS 14 or newer) | [1.0.3 (43) DMG](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/macos-v1.0.3/Pragmatic-Audio-PEQ-1.0.3-build43.dmg) · [release notes](../../releases/tag/macos-v1.0.3) | Signed by KONECKTA LIMITED; app and DMG notarized and stapled. |
 | **Windows 11** | [Build 26 installer](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/windows-v1.0.0/PragmaticAudioPEQ-1.0.0-build26-Setup.exe) | Previous tester build; a new local Windows build is pending. Not code-signed. |
-| **Android** (9 or newer) | [1.0.2 (38) APK](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/android-v1.0.2/Pragmatic-Audio-PEQ-1.0.2-build38.apk) · [release notes](../../releases/tag/android-v1.0.2) | Release-signed with the existing Android key; installed over build 26 on FiiO M25. |
+| **Android** (9 or newer) | [1.0.3 (43) APK](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/android-v1.0.3/Pragmatic-Audio-PEQ-1.0.3-build43.apk) · [release notes](../../releases/tag/android-v1.0.3) | Release-signed with the existing Android key, so it installs over earlier APKs. Not yet run on an Android device. |
 | **iPhone and iPad** (iOS 27 or later) | [Download on the App Store](https://apps.apple.com/us/app/pragmatic-audio-peq/id6818329288) | Available on the App Store. A physical device is required for live audio routing. |
 
 Each new Mac and Android release includes a SHA-256 checksum file. The APK is for
@@ -112,6 +143,8 @@ is how Wavelet and Poweramp Equalizer work. That means:
 - **Load a PEQ** from [OPRA](https://opra.roonlabs.net/) (thousands of headphones and IEMs, every creator credited), from the
   measurement sites through their Export button, or from a `Filters.txt` file.
 - **One PEQ editor**: drag the dots, change the width, type exact values, and hear every change live.
+- **Make your own from a measurement**: pick a measurement of your headphones (Pragmatic Audio, Squig.link search, a picture
+  of a graph or a `.txt` file), and **Smart EQ** or **Auto EQ** fits a PEQ to a target or preference range.
 - **Make your own**: simple bass and treble, a fixed-band graphic EQ, an advanced editor, and **Uplifting PEQ**, a listening
   process that tunes the treble above 4 kHz to your own ears.
 - **A bass and treble preference** that sits on top of any PEQ and any headphone.
@@ -122,7 +155,8 @@ is how Wavelet and Poweramp Equalizer work. That means:
 - **Live visualisation**: eight views, including Visual PEQ, which shows what the EQ does to your music as it plays.
 - **Headroom management**: the preamp is set from the filters, **Smart headroom** gives back volume where it safely can, and a
   limiter guards the peaks.
-- **In English, French, Spanish, German, Italian, Chinese and Japanese.**
+- **Network devices**: finds LUXSIN and WiiM devices and sends them a PEQ.
+- **In English, Dutch, French, Spanish, German, Italian, Chinese and Japanese.**
 
 ## A look
 
@@ -159,4 +193,6 @@ suggestions are welcome as [Issues](../../issues) in this repository.
 ## Credits
 
 Headphone corrections come from [OPRA](https://opra.roonlabs.net/) and its contributors (including oratory1990 and AutoEq),
-credited in the app next to every preset. Pragmatic Audio PEQ is not affiliated with any of them.
+credited in the app next to every preset. Measurements to design from are published by [Squig.link](https://squig.link/),
+[Hangout Audio](https://graph.hangout.audio/) and Pragmatic Audio; the targets and preference ranges rest on the published
+Harman research. Pragmatic Audio PEQ is not affiliated with any of them.

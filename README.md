@@ -9,7 +9,7 @@ This repository holds the **downloads** (see [Releases](../../releases)). The so
 with every screen explained, is on the website:
 **[Pragmatic Audio PEQ: the article](https://www.pragmaticaudio.com/articles/2026/10/pragmatic-audio-peq/)**.
 
-## What's new in 1.0.3 (build 43)
+## What's new in 1.0.3 (build 44)
 
 ### Make your own PEQ from a measurement
 
@@ -32,9 +32,10 @@ Measurements are only read to design an EQ on your device. Nothing is downloadab
 [Squig.link](https://squig.link/) and [Hangout Audio](https://graph.hangout.audio/) for the data themselves, and thank
 them for it.
 
-### Also new in build 43
+### Also new in build 44
 
-- **Devices with their own PEQ.** On Mac and Android, send a PEQ straight to USB DACs, dongles and amps that have one built in
+- **Devices with their own PEQ.** The Audio Device screen remembers the network devices it has found and lists them at once, then
+  looks for changes; when you come to save a profile, Write is the main button. On Mac and Android, send a PEQ straight to USB DACs, dongles and amps that have one built in
   (FiiO, Moondrop, Walkplay, Topping, JDS Labs, KT Micro, Qudelix and more), and to LUXSIN and WiiM devices on your network,
   with a picture of each. Which devices have been tried on real hardware varies; the LUXSIN X9 has.
 - **Audio recovery** on macOS and iPhone/iPad: if Pragmatic EQ is selected but the app is not responding, a helper restores
@@ -54,7 +55,7 @@ them for it.
 ## Also included since 1.0.2 (build 38)
 
 Available in the macOS and Android downloads below. iPhone and iPad users can
-download the app from the App Store (build 43 is in TestFlight and follows). The Windows download remains build 26
+download the app from the App Store (build 44 is in TestFlight and follows). The Windows download remains build 26
 while a new local Windows build is prepared.
 
 - **Adaptive navigation.** Compact portrait screens show Live, Profile, Find profile,
@@ -77,9 +78,9 @@ Please try them and report what you find in [Issues](../../issues).
 
 | Platform | Get it | Status |
 |---|---|---|
-| **macOS** (Apple silicon and Intel, macOS 14 or newer) | [1.0.3 (43) DMG](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/macos-v1.0.3/Pragmatic-Audio-PEQ-1.0.3-build43.dmg) · [release notes](../../releases/tag/macos-v1.0.3) | Signed by KONECKTA LIMITED; app and DMG notarized and stapled. |
+| **macOS** (Apple silicon and Intel, macOS 14 or newer) | [1.0.3 (44) DMG](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/macos-v1.0.3/Pragmatic-Audio-PEQ-1.0.3-build44.dmg) · [release notes](../../releases/tag/macos-v1.0.3) | Signed by KONECKTA LIMITED; app and DMG notarized and stapled. |
 | **Windows 11** | [Build 26 installer](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/windows-v1.0.0/PragmaticAudioPEQ-1.0.0-build26-Setup.exe) | Previous tester build; a new local Windows build is pending. Not code-signed. |
-| **Android** (9 or newer) | [1.0.3 (43) APK](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/android-v1.0.3/Pragmatic-Audio-PEQ-1.0.3-build43.apk) · [release notes](../../releases/tag/android-v1.0.3) | Release-signed with the existing Android key, so it installs over earlier APKs. Not yet run on an Android device. |
+| **Android** (9 or newer) | [1.0.3 (44) APK](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/download/android-v1.0.3/Pragmatic-Audio-PEQ-1.0.3-build44.apk) · [release notes](../../releases/tag/android-v1.0.3) | Release-signed with the existing Android key, so it installs over earlier APKs. Not yet run on an Android device. |
 | **iPhone and iPad** (iOS 27 or later) | [Download on the App Store](https://apps.apple.com/us/app/pragmatic-audio-peq/id6818329288) | Available on the App Store. A physical device is required for live audio routing. |
 
 Each new Mac and Android release includes a SHA-256 checksum file. The APK is for

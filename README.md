@@ -55,7 +55,7 @@ them for it.
 ## Also included since 1.0.2 (build 38)
 
 Available in the macOS and Android downloads below. iPhone and iPad users can
-download the app from the App Store (build 44 is in TestFlight and follows). The Windows download remains build 26
+download the app from the App Store. The Windows download remains build 26
 while a new local Windows build is prepared.
 
 - **Adaptive navigation.** Compact portrait screens show Live, Profile, Find profile,

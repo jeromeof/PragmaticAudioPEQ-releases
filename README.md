@@ -9,6 +9,23 @@ This repository holds the **downloads** (see [Releases](../../releases)). The so
 with every screen explained, is on the website:
 **[Pragmatic Audio PEQ: the article](https://www.pragmaticaudio.com/articles/2026/10/pragmatic-audio-peq/)**.
 
+## Test build 1.0.4 (build 59)
+
+[Download the macOS test build](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/tag/macos-v1.0.4-59).
+The stable downloads below are unchanged.
+
+- **Live device PEQ editing is now standard**, enabled by default for supported devices. Find the preference under
+  **Settings > Audio device**. Changes apply to the hardware while editing; Save writes them to its memory.
+- **WalkPlay over Bluetooth LE** can send PEQ to the tested dongles. Loading returns only the clearly labelled copy last
+  sent by this app; it cannot read the full device PEQ over Bluetooth. USB readback remains available.
+- **Shared write-only device handling** prevents incomplete readback and automatic reads on connections that cannot
+  return a complete PEQ. WalkPlay BLE writes use the configured Custom slot.
+- Updated WalkPlay USB, Android HID, Topping and WiiM integrations.
+
+Android APK and Play Store bundle 1.0.4 (59) and an iOS App Store/TestFlight package are also prepared. USB live device
+EQ is supported by the Android implementation for WalkPlay devices such as Protocol Max; this build has not yet been
+verified with a Protocol Max attached to an Android phone. Windows is unchanged in this update.
+
 ## What's new in 1.0.3 (build 57)
 
 - **Measurement EQ is out of preview.** Choose **Smart EQ**, **Auto EQ** or **Your own** (an empty EQ you build yourself). The graph

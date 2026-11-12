@@ -9,10 +9,32 @@ This repository holds the **downloads** (see [Releases](../../releases)). The so
 with every screen explained, is on the website:
 **[Pragmatic Audio PEQ: the article](https://www.pragmaticaudio.com/articles/2026/10/pragmatic-audio-peq/)**.
 
-## Test build 1.0.4 (build 59)
+## Test build 1.0.4 (build 62)
 
-[Download the macOS test build](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/tag/macos-v1.0.4-59).
+[Download the macOS test build](https://github.com/jeromeof/PragmaticAudioPEQ-releases/releases/tag/macos-v1.0.4-62).
 The stable downloads below are unchanged.
+
+### New: Soundstage
+
+**Soundstage** (under Effects) places the music in two virtual loudspeakers in front of you and lets you hear them through a
+simple model of your head, so a stereo recording sounds more like speakers in a room than a sound inside your skull. It is
+for headphones, and off until you switch it on.
+
+- **Width** sets how far apart the speakers are (±10° to ±50°). The middle, 50%, is the ±30° stereo standard.
+- **Angle** turns the speakers. The middle aims them at you; turned either way they lose treble towards you and the room
+  is heard more.
+- **Distance** moves them from 0.75 m to 3 m (the middle is 1.5 m).
+- Under **Advanced**: **Room size**, **Walls** (soft to hard) and **Amount**. A top-down picture shows the speakers and
+  the room as you change them, and a note gives the ITU-R BS.1116 reference values to compare with.
+- Every control starts in the middle, and Soundstage is level-matched, so On and Off should be about equally loud.
+- It models the delay and shadow between your ears, and twelve first-order room reflections (four walls, floor and
+  ceiling, for each speaker). There is no head tracking and no personalised HRTF, so how far the sound moves out of your
+  head varies between people and recordings.
+
+Soundstage is in the macOS and iOS apps. Android hides it, because Android's system EQ cannot run it. The Android bundle and
+the iOS package for 1.0.4 (62) are prepared; Windows is unchanged in this update.
+
+### Also in build 59
 
 - **Live device PEQ editing is now standard**, enabled by default for supported devices. Find the preference under
   **Settings > Audio device**. Changes apply to the hardware while editing; Save writes them to its memory.
